@@ -1,0 +1,253 @@
+*{box-sizing: border-box;} a{text-decoration: none;color: #ffffff9b;}
+
+.siteBG{
+    background-color: #313338;
+}
+
+.prime-menu{
+    background-color: #2B2D31;
+    width: 300px;
+    min-width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+}
+
+.menu-layout{
+    display: flex;
+    flex-direction: column;
+}
+
+.app-layout{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-layout{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+}
+
+.container-pages{
+    padding: 20px;
+    width: 100%;
+    max-width: 969px;
+    margin: 0 auto;
+}
+
+h1{
+    color: #FFFFFF;
+    font-weight: 900;
+    margin: 40px auto;
+}
+
+.mini-roles{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 19px 0px 9px 0px;
+    padding: 0px 0px 15px 0px;
+}
+
+.mini-roles a{
+    color: #ffffff9b;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2B2D31;
+    border-radius: 7px;
+    padding: 12px 20px 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 9px 0px 0px;
+    min-width: fit-content;
+}
+
+
+.menu-layout ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+.menu-layout li{
+    padding: 7px 12px 7px 12px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 3px 0px;
+    
+}
+
+.menu-layout li.active{
+    background-color: #404248;
+}
+
+h2{
+    color: #ffffff9b;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.menu-layout li:hover{
+    background-color: #37393e;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.user{
+    padding: 20px 20px 0px 20px;
+    position: relative;
+}
+
+.user h2{
+    text-transform: uppercase;
+}
+
+.menu-layout svg{
+    margin: 0px 5px 0px 0px;
+    height: 19px;
+    width: 19px;
+}
+
+/* .img-fon img{
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+
+} */
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 99;
+    border-bottom: 1px solid #ffffff19;
+    padding-bottom: 15px;
+}
+
+.profile img{
+    width: 100%;
+    max-width: 60px;
+    border-radius: 100px;
+    margin: 0px 12px 0px 0px;
+}
+
+.profile-info p{
+    font-size: 14px;
+    color: #ffffff9b;
+}
+.profile-info span{
+    color: #FFFFFF69;
+    font-size: 15px;
+}
+
+
+.user-info span{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-info p{
+    color: #FFFFFF70;
+    border-bottom: 1px solid #FFFFFF19;
+    padding: 12px 0px 12px 0px;
+}
+
+.index-cart{
+    width: 30%;
+    padding: 20px;
+    border-radius: 9px;
+    background-color: #2B2D31;
+    color: #FFFFFF70;
+    margin: 0px 20px 0px 0px;
+}
+
+.index-cart span {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.index-cart-footer{
+    color: #FFFFFF70;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.index-cart-footer svg{
+    margin: 0px 12px 0px 0px;
+}
+
+.index-cart p{
+    color: #ffffffce;
+    font-size: 14px;
+}
+
+.index-cart img{
+    display: none;
+}
+
+.container{
+    padding: 0px 0px 0px 0px;
+}
+
+.cart-layout{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+
+
+.cart-header{
+    font-size: 20px;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-header img{
+    height: 25px;
+    margin: 0px 9px 0px 0px;
+}
+
+.cart-header h2{
+    color: #ffffffea;
+    margin: -3px 0px 0px 0px;
+}
+
+.container-pages input {
+    width: 100%;
+    border-radius: 9px;
+    background-color: #1E1F22;
+    color: #FFFFFF;
+    padding: 12px 20px 12px 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cart-header span{
+    background-color: #404248;
+    padding: 9px;
+    border-radius: 100px;
+    font-size: 12px;
+    margin: 0px 0px 0px 7px;
+    position: relative;
+    top: -2px;
+}
