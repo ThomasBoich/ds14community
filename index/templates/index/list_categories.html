@@ -1,0 +1,39 @@
+{% extends 'default.html' %}{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1>{{ parent_category.name }}</h1>
+
+    <p class="p-list">{{ parent_category.description }}</p>
+    <div class="list_categories">
+    <ul>
+        {%for cat in subcategories%}
+        {%if cat.post%}
+        <li><a href="{% url 'list_categories' cat.id %}">
+            <span>{{cat.post.title}}</span>
+            <p>{{cat.post.description}}</p>
+        </a></li>
+        {% else %}
+        <li><a href="{% url 'list_categories' cat.id %}">
+            <span>{{cat.name}}</span>
+            <p>{{cat.description}}</p>
+        </a></li>
+        {% endif %}
+       
+
+
+        {%endfor%}
+    </ul>
+</div>
+</div>
+<style>
+    h1{
+        margin: 40px 0px 15px 0px;
+    }
+
+    p.p-list{
+        margin: 0px 0px 35px 0px;
+        color: #FFFFFF;
+    }
+</style>
+{% endblock %}

@@ -1,13 +1,38 @@
-*{box-sizing: border-box;} a{text-decoration: none;color: #ffffff9b;}
-
-.siteBG{
-    background-color: #313338;
+*{box-sizing: border-box;} a{text-decoration: none;color: #ffffff9b;width: 100%;}
+html {
+    /* scrollbar-color: #313338 #4b4b4b;
+    scrollbar-width: thin; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
+
+html::-webkit-scrollbar {
+    width: 9px;
+}
+
+.logo{font-size: 25px;font-weight: 700;color: #FFFFFF;}.logo span{color: #FFFFFF90;font-weight: 500;font-size: 15px;}
+h1,h2,h3,h4,h5,h6,p,div,span,input,form,ul,li{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,div,span:hover{
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar-track {border-radius: 7px!IMPORTANT;box-shadow: none!IMPORTANT;}
+html::-webkit-scrollbar {width: 9px!IMPORTANT;box-shadow: none!IMPORTANT;}
+html::-webkit-scrollbar-thumb {border-radius: 7px!IMPORTANT;background: #505358!IMPORTANT;box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3)!IMPORTANT;}
+html:hover::-webkit-scrollbar-thumb {background: #454550!IMPORTANT;box-shadow: none!IMPORTANT;}
+
+
 
 .prime-menu{
     background-color: #2B2D31;
-    width: 300px;
-    min-width: 300px;
+    width: 275px;
+    min-width: 275px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,6 +41,30 @@
     overflow-y: auto;
     position: sticky;
     top: 0;
+}
+
+/* .prime-menu::-webkit-scrollbar-track {
+    background-color: rgba(103, 103, 103, 0)!IMPORTANT;
+    border-radius: 7px!IMPORTANT;
+}
+
+.prime-menu::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(32, 32, 32, 0.62)!IMPORTANT;
+    width: 7px!IMPORTANT;
+
+}
+.prime-menu::-webkit-scrollbar {
+    width: 7px!IMPORTANT;
+    background-color: rgb(103, 103, 103)!IMPORTANT;
+
+} */
+.prime-menu::-webkit-scrollbar-track {border-radius: 7px!IMPORTANT;box-shadow: none!IMPORTANT;}
+.prime-menu::-webkit-scrollbar {width: 5px!IMPORTANT;box-shadow: none!IMPORTANT;}
+.prime-menu::-webkit-scrollbar-thumb {border-radius: 7px!IMPORTANT;background: #2b2d31!IMPORTANT;box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3)!IMPORTANT;}
+.prime-menu:hover::-webkit-scrollbar-thumb {background: #3d4045!IMPORTANT;box-shadow: none!IMPORTANT;}
+
+.siteBG{
+    background-color: #313338;
 }
 
 .menu-layout{
@@ -58,6 +107,12 @@ h1{
     padding: 0px 0px 15px 0px;
 }
 
+.mini-roles::-webkit-scrollbar-track {border-radius: 7px!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
+.mini-roles::-webkit-scrollbar {width: 9px!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
+.mini-roles::-webkit-scrollbar-thumb {border-radius: 7px!IMPORTANT;background: #313338!IMPORTANT;box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3)!IMPORTANT;height: 5px;}
+.mini-roles:hover::-webkit-scrollbar-thumb {background: #48484f!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
+
+
 .mini-roles a{
     color: #ffffff9b;
     font-size: 18px;
@@ -69,6 +124,8 @@ h1{
     display: inline-block;
     margin: 0px 9px 0px 0px;
     min-width: fit-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 
@@ -76,7 +133,7 @@ h1{
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 15px 9px 15px;
 }
 
 .menu-layout li{
@@ -97,6 +154,13 @@ h2{
     font-size: 15px;
     text-transform: uppercase;
     transition: all 0.2s;
+    width: max-content;
+}
+
+.menu-layout h2{
+    margin: 15px 0px 7px 0px;
+    font-size: 13px;
+    padding: 0 13px;
 }
 
 .menu-layout li:hover{
@@ -112,6 +176,7 @@ h2{
 
 .user h2{
     text-transform: uppercase;
+    margin: 0px 0px 9px 0px!IMPORTANT;
 }
 
 .menu-layout svg{
@@ -119,6 +184,7 @@ h2{
     height: 19px;
     width: 19px;
 }
+
 
 /* .img-fon img{
     opacity: 0.4;
@@ -139,9 +205,9 @@ h2{
 
 .profile img{
     width: 100%;
-    max-width: 60px;
-    border-radius: 100px;
-    margin: 0px 12px 0px 0px;
+    max-width: 49px;
+    border-radius: 37px;
+    margin: 0px 15px 0px 0px;
 }
 
 .profile-info p{
@@ -172,7 +238,8 @@ h2{
     border-radius: 9px;
     background-color: #2B2D31;
     color: #FFFFFF70;
-    margin: 0px 20px 0px 0px;
+    margin: 0px 20px 9px 0px;
+    min-width: 275px;
 }
 
 .index-cart span {
@@ -195,6 +262,7 @@ h2{
 .index-cart p{
     color: #ffffffce;
     font-size: 14px;
+    margin: 0px 0px 15px 0px;
 }
 
 .index-cart img{
@@ -212,6 +280,10 @@ h2{
     overflow-x: auto;
 }
 
+.cart-layout::-webkit-scrollbar-track {border-radius: 7px!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
+.cart-layout::-webkit-scrollbar {width: 9px!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
+.cart-layout::-webkit-scrollbar-thumb {border-radius: 7px!IMPORTANT;background: #313338!IMPORTANT;box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3)!IMPORTANT;height: 5px;}
+.cart-layout:hover::-webkit-scrollbar-thumb {background: #48484f!IMPORTANT;box-shadow: none!IMPORTANT;height: 5px;}
 
 
 .cart-header{
@@ -239,7 +311,63 @@ h2{
     padding: 12px 20px 12px 20px;
     border: none;
     font-size: 18px;
+    font-weight: 500;
+}
+.container-pages input:focus{
+    outline: 2px solid #505358;
+}
+
+
+
+
+.list_categories{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+.list_categories ul > li{    
+    background-color: #404248;
+    border-radius: 7px;
+    font-size: 20px;
+    background-color: #404248;
+    border-radius: 13px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px 0px 7px 0px;
+    list-style: none;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+.list_categories a{
+    padding: 15px 25px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+
+.list_categories ul > li:hover{
+    box-shadow: 0px 7px 7px 0px #19191940;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    position: relative;
+    transform: translateY(-3px);
+}
+
+
+
+.list_categories span{
+    font-size: 20px;
     font-weight: 700;
+    color: #FFFFFF;
+}
+
+.list_categories p{
+    font-size: 15px;
+    color: #ffffff86;
 }
 
 .cart-header span{
