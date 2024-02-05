@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'index',
     'posts',
     'django_ckeditor_5',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -247,4 +248,10 @@ CKEDITOR_5_CONFIGS = {
         'reversed': 'true',
     }
 }
+}
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+    },
 }

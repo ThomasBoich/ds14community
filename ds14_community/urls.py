@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('ckeditor5/', include('django_ckeditor_5.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
     path('', include('index.urls')),
    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

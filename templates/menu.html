@@ -1,0 +1,8 @@
+{% for main_category in main_categories %}
+  <h2>{{ main_category.name }}</h2>
+  <ul>
+    {% for subcategory in main_category.subcategories.all %}
+      <li>{{ subcategory.name }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
