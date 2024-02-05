@@ -1,0 +1,74 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Новая категория</h1>
+  <form method="POST" class="post-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Сохранить</button>
+  </form>
+</div>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    form p{
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+        color: #FFFFFF;
+         }
+         .ck-content p{
+            color: inherit;
+         }
+    input{
+        font-size: 17px;
+        color: #FFFFFF;
+        font-weight: 700!IMPORTANT;
+        padding: 5px 15px 5px 15px;
+        border-radius: 9px;
+        border: none;
+        margin: 0px 0px 15px 0px;
+        background-color: #4f535b;
+    }form textarea{
+        width: 100%;
+        border-radius: 9px;
+        border: none;
+        margin: 0px 0px 15px 0px;
+        min-height: 250px;
+        background-color: #4f535b;
+        padding: 15px 15px 15px 15px;
+        /* color: #FFFFFF; */
+        font-weight: 700;
+    }
+    .container{
+        /* color: #FFFFFF; */
+        max-width: 969px;
+    }
+    .btn-default{
+        color: #FFFFFF;
+        border-radius: 9px;
+        border: none;
+        font-weight: 700;
+        font-size: 17px;
+        padding: 15px 15px 15px 15px;
+        background: #4d4ea7;
+    }.btn-default:hover{
+        background: #595bbd;
+    }
+    select{        
+        width: 100%;
+        border-radius: 9px;
+        border: none;
+        margin: 0px 0px 15px 0px;
+        min-height: auto;
+        background-color: #4f535b;
+        padding: 15px 15px 15px 15px;
+        color: #FFFFFF;
+        font-weight: 700!IMPORTANT;
+        }
+</style>
+{% endblock %}
