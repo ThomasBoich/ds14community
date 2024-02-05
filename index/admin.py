@@ -6,4 +6,5 @@ from .models import Baner
 
 @admin.register(Baner)
 class BanerAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('text',)
+    #pass

@@ -95,7 +95,7 @@
                         {% for subcategory in category.subcategories.all %}
                       
                             <div class="index-cart">
-                              <a href="{% url 'list_categories' cat_id=subcategory.id %}">
+                              <a href="{% url 'sub_list_categories' cat_id=subcategory.id %}">
                                 <img src="" alt="">
                                 <span>{{subcategory.name}}</span>
                                 <p>{{subcategory.description}}</p>
