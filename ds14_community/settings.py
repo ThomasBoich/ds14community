@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*v9n&p5q(28cl!dk33c)qtk#1#5!ur%ej@7*7(968%j+0p6t*g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'team.deadspace14.net']
 
 
 # Application definition
@@ -153,7 +153,7 @@ STATICFILES_DIRS = [
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
+CSRF_TRUSTED_ORIGINS=["http://team.deadspace14.net","https://team.deadspace14.net"]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 customColorPalette = [
