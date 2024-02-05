@@ -17,7 +17,7 @@
                     <!-- <img src="{% static 'img/fon.jpg' %}" alt=""> -->
                     <div class="profile">
                         
-                        {% if request.user.photo %}
+                        {% if request.user.photo.url and request.user.photo.url %}
                         <img class='img-fon' src="{{request.user.photo.url}}" alt="">
                         {%else%}
                         <img class='img-fon' src="{% static 'img/avatarka.png' %}" alt="">
