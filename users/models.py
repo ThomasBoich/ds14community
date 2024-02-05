@@ -59,6 +59,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 # ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ С ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИЕЙ #
 class Profile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    nick = models.CharField(max_length=255, blank=True, null=True, verbose_name='Никнейм')
     background = models.ImageField(upload_to="profiles/backgrounds/%Y/%m/%d/", blank=True, null=True)
     CURATOR = 'CU'
     JUNIOR_CURATOR = 'JC'
