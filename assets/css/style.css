@@ -379,3 +379,34 @@ h2{
     position: relative;
     top: -2px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tbody, td, tfoot, th, thead, tr{
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    background-color: #313338;
+    color: #FFFFFF;
+    padding: 15px 15px 15px 15px;
+}
+.table{
+    width: 100%!IMPORTANT;
+}
+
