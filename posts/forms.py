@@ -7,8 +7,6 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'description', 'text', 'category']
 
-
-
     def __init__(self, *args, **kwargs):
         """
         Обновление стилей формы под Bootstrap
@@ -19,6 +17,7 @@ class PostForm(forms.ModelForm):
         
         self.fields['text'].widget.attrs.update({'class': 'form-control django_ckeditor_5'})
         self.fields['text'].required = False
+
 
 
 
