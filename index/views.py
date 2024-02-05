@@ -9,11 +9,13 @@ from django.urls import reverse_lazy
 # Create your views here.
 def index(request):
     if request.user.is_authenticated:
-
-        categories = Category.objects.filter(subcategories__isnull=False).distinct()
+        main_categories = Category.objects.filter(parent_category__isnull=True).prefetch_related('subcategories')
+        # categories = Category.objects.filter(subcategories__isnull=True).prefetch_related('subcategories')
+        categories = Category.objects.filter(parent_category__isnull=True).prefetch_related('subcategories')
         context = {
             'categories': categories,
-            'baners': Baner.objects.all()
+            'baners': Baner.objects.all(),
+            'main_categories': main_categories
         }
         
         return render(request, 'index/index.html', context)

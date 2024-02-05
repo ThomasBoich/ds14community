@@ -78,6 +78,16 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
+ 
+                  {% for main_category in main_categories %}
+                  <h2>{{ main_category.name }}</h2>
+                  <ul>
+                    {% for subcategory in main_category.subcategories.all %}
+                      <li>{{ subcategory.name }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endfor %}
+
 
                 {% for category in categories %}
                 <div class="container" style="display: flex;flex-direction: column;margin: 0px 0px 40px 0px;">
