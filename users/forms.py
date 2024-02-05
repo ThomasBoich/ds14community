@@ -42,7 +42,7 @@ class LoginForm(AuthenticationForm):
 
     class Meta:
         model = CustomUser
-        fields = ['email', 'username', 'password']
+        fields = ['email', 'password']
 
 class ProfileRegisterForm(forms.ModelForm):
     class Meta:

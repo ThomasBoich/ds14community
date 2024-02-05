@@ -9,16 +9,16 @@
     <p class="p-list">{{ parent_category.description }}</p>
     <div class="list_categories">
     <ul>
-        {%for cat in subcategories%}
-        {%if cat.post%}
-        <li><a href="{% url 'sub_list_categories' cat.id %}">
-            <span>{{cat.post.title}}</span>
-            <p>{{cat.post.description}}</p>
+        {%for post in parent_category.post_set.all%}
+        {%if post.post%}
+        <li><a href="{% url 'post' post.id %}">
+            <span>{{post.title}}</span>
+            <p>{{post.description}}</p>
         </a></li>
         {% else %}
-        <li><a href="{% url 'sub_list_categories' cat.id %}">
-            <span>{{cat.name}}</span>
-            <p>{{cat.description}}</p>
+        <li><a href="{% url 'post' post.id %}">
+            <span>{{post.name}}</span>
+            <p>{{post.description}}</p>
         </a></li>
         {% endif %}
        

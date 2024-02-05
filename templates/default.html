@@ -16,18 +16,23 @@
                   
                     <!-- <img src="{% static 'img/fon.jpg' %}" alt=""> -->
                     <div class="profile">
-                        <img class='img-fon' src="{% static 'img/avatar.png' %}" alt="">
+                        
+                        <img class='img-fon' src="{% static 'img/avatarka.png' %}" alt="">
                         <div class="profile-info" style="line-height: 0.3;height:47px;">
-                            <h3 style="margin: 0px 0px 9px 0px;font-size: 19px;">Chuiomoio</h3>
-                            <span>Куратор</span>
+                            <h3 style="margin: 0px 0px 9px 0px;font-size: 19px;">{{request.user.username}}</h3>
+                            <span>{{request.user.email}}</span>
                         </div>
                         
                         
                     </div>
-                    <div class="user-info">
-                        
-                        <p># Люблю своего господина</p>
-                    </div>
+                    <!-- <div class="user-info">
+                        {%if request.user.profile == ''%}
+                        <p>Поделись статусом:                         
+                        <a href="">тут</a></p>
+                        {%else%}
+                        <p># {{request.user.profile.text}}</p>
+                        {%endif%}                        
+                    </div> -->
                 </div>
                 <ul>
                     <h2>Основное</h2>

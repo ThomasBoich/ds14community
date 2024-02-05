@@ -12,8 +12,8 @@ from django.db.models.signals import post_save
 from .managers import CustomUserManager
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(max_length=254, unique=True, verbose_name='Email adress', blank=True, null=True)
-    username = models.CharField(max_length=49, blank=True, null=True, verbose_name='User Name')
+    email = models.EmailField(max_length=254, unique=True,  verbose_name='Email adress', blank=True, null=True)#
+    username = models.CharField(max_length=49, blank=True, null=True, unique=True, verbose_name='User Name')
     first_name = models.CharField(u"First Name", max_length=100, blank=True, null=True)
     last_name = models.CharField(u"Last Name", max_length=100, blank=True, null=True)
     patronymic = models.CharField(u"Patronymic", max_length=100, blank=True, null=True)
@@ -28,9 +28,38 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(u'date joined', blank=True, null=True, default=timezone.now)
     last_login = models.DateTimeField(u'last login', blank=True, null=True)
     verificated = models.BooleanField(default=False, blank=True, null=True)
-   
     ADMINISTRATOR = 'AD'
     MANAGER = 'MA'
+    TYPE_ROLE = [(ADMINISTRATOR, 'Администратор'), (MANAGER, 'Менеджер'),]
+
+    type = models.CharField(max_length=40, choices=TYPE_ROLE, default=MANAGER, verbose_name='Type User')
+    ban = models.BooleanField(default=False, verbose_name='Baned')
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['last_name', 'first_name',]
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return f'{self.last_name} {self.first_name}  {self.patronymic}'
+
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
+        # db_table = 'users_customuser'
+
+    def get_absolute_url(self):
+        return reverse('user_info', kwargs={'user_id': self.id})
+
+    # def save(self, *args, **kwargs):
+    #     using = 'users'
+    #     super(CustomUser, self).save(using=using, *args, **kwargs)
+
+
+# ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ С ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИЕЙ #
+class Profile(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    background = models.ImageField(upload_to="profiles/backgrounds/%Y/%m/%d/", blank=True, null=True)
     CURATOR = 'CU'
     JUNIOR_CURATOR = 'JC'
     SENIOR_EVENT_MASTER = 'SEM'
@@ -66,8 +95,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     SMOOKER_KNIGHT = 'SK'
 
     TYPE_ROLE = [
-        (ADMINISTRATOR, 'Администратор'),
-        (MANAGER, 'Менеджер'),
         (CURATOR, 'Куратор'),
         (JUNIOR_CURATOR, 'Младший куратор'),
         (SENIOR_EVENT_MASTER, 'Старший ивент-мастер'),
@@ -103,37 +130,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         (SMOOKER_KNIGHT, 'Рыцарь Смока'),
     ]
 
-    type = models.CharField(max_length=40, choices=TYPE_ROLE, default=MANAGER, verbose_name='Type User')
-    ban = models.BooleanField(default=False, verbose_name='Baned')
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['last_name', 'first_name',]
-
-    objects = CustomUserManager()
-
+    type = models.CharField(max_length=40, choices=TYPE_ROLE, default=ARTIST, verbose_name='Type User')
+    
     def __str__(self):
-        return f'{self.last_name} {self.first_name}  {self.patronymic}'
-
-    class Meta:
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
-        # db_table = 'users_customuser'
-
-    def get_absolute_url(self):
-        return reverse('user_info', kwargs={'user_id': self.id})
-
-    # def save(self, *args, **kwargs):
-    #     using = 'users'
-    #     super(CustomUser, self).save(using=using, *args, **kwargs)
-
-
-# ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ С ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИЕЙ #
-class Profile(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    background = models.ImageField(upload_to="profiles/backgrounds/%Y/%m/%d/", blank=True, null=True)
-
-    def __str__(self):
-        return f" {self.user.first_name} {self.user.last_name}"
+        return f" {self.user.first_name} {self.user.last_name} {self.user.email}"
 
     class Meta:
         verbose_name = 'User profile'

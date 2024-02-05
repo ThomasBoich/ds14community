@@ -1,0 +1,31 @@
+{% extends 'default.html' %}{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="post">
+        <a href="{{ back_url }}">Назад</a>
+        <h1>{{post.title}}</h1>
+        {{post.text|safe}}
+    </div>
+
+</div>
+</div>
+<style>
+    .post a{
+        margin: 40px 0px 0px 0px;
+        display: flex;
+    }
+    h1{
+        margin: 0px 0px 15px 0px;
+    }
+
+    p.p-list{
+        margin: 0px 0px 35px 0px;
+        color: #FFFFFF;
+    }
+    .container{
+        max-width: 969px;
+        color: #FFFFFF;
+    }
+</style>
+{% endblock %}

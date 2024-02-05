@@ -11,7 +11,7 @@ class Post(models.Model):
     description = models.CharField(max_length=255)
     text = CKEditor5Field(config_name='extends')
     created_add = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(CustomUser, related_name='like_user')
+    likes = models.ManyToManyField(CustomUser, related_name='like_user', blank=True, null=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, blank=True, null=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, blank=True, null=True)
     
