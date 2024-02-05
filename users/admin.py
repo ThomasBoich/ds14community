@@ -32,7 +32,7 @@ class CustomUserAdmin(UserAdmin):
             'phone',
         )}),
         ('Permissions', {
-            'fields': ('is_superuser', 'ban', 'is_staff', 'is_active','verificated')}),#'type',
+            'fields': ('is_superuser', 'ban', 'is_staff', 'is_active','verificated','groups')}),#'type',
     )
     add_fieldsets = (
         (None, {
@@ -50,6 +50,7 @@ class CustomUserAdmin(UserAdmin):
                 'last_name',
                 'patronymic',
                 'phone',
+                'groups',
 
             )}
         ),
