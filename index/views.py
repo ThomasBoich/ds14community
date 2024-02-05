@@ -15,7 +15,7 @@ def index(request):
         context = {
             'categories': categories,
             'baners': Baner.objects.all(),
-            'main_categories': main_categories
+            'main_categories': main_categories,
         }
         
         return render(request, 'index/index.html', context)
