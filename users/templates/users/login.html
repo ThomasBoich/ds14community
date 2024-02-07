@@ -1,6 +1,7 @@
-{% extends 'default.html' %}
+{% extends 'default.html' %}{% load static %}
 {% block content %}
 <div class="fom-layout">
+    <img src="{% static 'img/welcome.png' %}" alt="">
     <form action="" method="post" align="center" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
         {% csrf_token %}
         <h1>Пу-пу-пу...</h1>
@@ -12,7 +13,7 @@
 
 <style>
     .prime-menu{display: none!IMPORTANT;}
-    form{margin:0 auto;display: flex;flex-direction: column;width: 90%;max-width: 369px;}
+    form{margin:0 auto;display: flex;flex-direction: column;width: 90%;max-width: 369px;z-index: 7;}
     form button{transition: all 0.3s;-webkit-transition: all 0.3s; -moz-transition: all 0.3s;background-color: #5865f2;border:none;color:#FFFFFF;padding: 15px 15px 15px 15px;border-radius: 9px;font-size: 17px;font-weight: 700;}
    
     form button:hover{background-color: #4b57e0;transition: all 0.3s;-webkit-transition: all 0.3s; -moz-transition: all 0.3s;}
@@ -26,6 +27,7 @@
         border-radius: 9px;
         margin: 0px 0px 15px 0px;
         padding: 15px 15px 15px 15px;
+        opacity: 0.9;
     }.fom-layout{
         display: flex;
         min-height: 100vh;
@@ -76,6 +78,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+.fom-layout img{position: absolute;bottom: 0;z-index: 2;opacity: 0.3;object-fit: cover;width: 100%;max-width: 569px;}
 </style>
 <script>
 document.querySelectorAll('input').forEach(function(input) {
