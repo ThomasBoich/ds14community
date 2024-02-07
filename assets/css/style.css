@@ -607,6 +607,7 @@ tbody, td, tfoot, th, thead, tr{
         font-weight: 700;
         bottom: 5dvh;
         right: 15px;
+        display: none;
     }
     .mobile-menu img, svg {
         height: 31px;
