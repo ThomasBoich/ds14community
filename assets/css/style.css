@@ -448,6 +448,7 @@ h2{
     font-size: 20px;
     font-weight: 700;
     color: #FFFFFF;
+    line-height: normal;
 }
 
 .list_categories p{
@@ -529,4 +530,18 @@ tbody, td, tfoot, th, thead, tr{
     .content-layout{
         width: 100%;
     }
+
+    .list_categories ul > li{
+        margin: 0px 0px 15px 0px;
+    }
+
+    #index-category{
+        margin: 0px 0px 15px 0px!IMPORTANT;
+    }
+}
+
+.active.prime-menu{
+    display: flex;
+    position: fixed;
+    z-index: 9;
 }
