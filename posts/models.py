@@ -7,13 +7,13 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
-    text = CKEditor5Field(config_name='extends')
+    title = models.CharField(max_length=255, verbose_name='Заголовок')
+    description = models.CharField(max_length=255, verbose_name='Описание')
+    text = CKEditor5Field(config_name='extends', verbose_name='Текст')
     created_add = models.DateTimeField(auto_now=True)
     likes = models.ManyToManyField(CustomUser, related_name='like_user', blank=True, null=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, blank=True, null=True)
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, blank=True, null=True)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, blank=True, null=True, verbose_name='Категория')
     
     def __str__(self):
         return self.title
