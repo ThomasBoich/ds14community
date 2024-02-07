@@ -112,8 +112,6 @@ html::-webkit-scrollbar {width: 9px!IMPORTANT;box-shadow: none!IMPORTANT;}
 html::-webkit-scrollbar-thumb {border-radius: 7px!IMPORTANT;background: #505358!IMPORTANT;box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3)!IMPORTANT;}
 html:hover::-webkit-scrollbar-thumb {background: #454550!IMPORTANT;box-shadow: none!IMPORTANT;}
 
-
-
 .prime-menu{
     background-color: #2B2D31;
     width: 275px;
@@ -591,7 +589,7 @@ tbody, td, tfoot, th, thead, tr{
     
     .prime-swipe{
         position: absolute;
-        bottom: 15vh;
+        bottom: 9px;
         width: 100%;
         display: flex;
         font-style: initial;
