@@ -610,7 +610,9 @@ tbody, td, tfoot, th, thead, tr{
     }
     .mobile-menu a{
         width: max-content;
+        height: max-content;
         cursor: pointer;
+        z-index: 5;
     }
 
     .content-layout{
