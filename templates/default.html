@@ -16,8 +16,7 @@
         <div class="prime-menu">
             <div class="menu-layout">
                 <div class="user">
-                  
-                    <!-- <img src="{% static 'img/fon.jpg' %}" alt=""> -->
+                <!-- <img src="{% static 'img/fon.jpg' %}" alt=""> -->
                 <a href="{% url 'profile' %}">
                     <div class="profile">
                         
@@ -43,8 +42,7 @@
                         {%endif%}                        
                     </div> -->
                 </div>
-                <ul>
-                    <h2>Основное</h2>
+                <ul style="margin: 0px 0px 0px 0px; padding: 0px 15px 0px 15px;">                    <h2>Основное</h2>
                     <li class="active"><a href="{% url 'index' %}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-through-heart-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l3.103-3.104a.5.5 0 1 1 .708.708L4.5 12.207V14a.5.5 0 0 1-.146.354zM16 3.5a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182A24 24 0 0 1 5.8 12.323L8.31 9.81a1.5 1.5 0 0 0-2.122-2.122L3.657 10.22a9 9 0 0 1-1.039-1.57c-.798-1.576-.775-2.997-.213-4.093C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5z"/>
@@ -55,7 +53,6 @@
                             <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z"/>
                           </svg>
                         Википедия</a></li> -->
-
                         <li class=""><a href="{% url 'post_new' %}">
                             <svg style="opacity: 0.5;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px"><g fill="#FFFFFF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M6,2c-1.09425,0 -2,0.90575 -2,2v16c0,1.09426 0.90575,2 2,2h12c1.09426,0 2,-0.90574 2,-2v-12l-6,-6zM6,4h7v5h5v11h-12zM8,12v2h8v-2zM8,16v2h8v-2z"></path></g></g></svg>
                             Создать статью</a></li>
@@ -67,18 +64,75 @@
                             <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"/>
                           </svg>
                         Блог</a></li> -->
-
-                        {% load menu_tags %}
+                        {% load menu_tags %}                        
                 </ul>
-
-
+                <div class="href" style="width: 100%;padding: 0px 19px 0px 19px;margin: -12px 0px 0px 0px;">
+                <hr></div>
+                  {% for category in categories_as %}
+                <details class="category_as">
+                    <summary>{{ category.name }}</summary>
+                    {% for subcategory in category.subcategories.all %}<a href="{% url 'sub_list_categories' cat_id=subcategory.id %}"><span style="font-size: 19px;margin: 0px 19px 0px 3px;"># </span>{{subcategory.name}}</a>{% endfor %}
+                  </details>
+                  {% endfor %}
             </div>
             <div class="prime-swipe">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M39.48633,6.97852c-0.39614,0.00936 -0.77249,0.17506 -1.04687,0.46094l-14.43945,14.43945l-14.43945,-14.43945c-0.28248,-0.2909 -0.67069,-0.45506 -1.07617,-0.45508c-0.61064,0.00015 -1.16026,0.37042 -1.38978,0.93629c-0.22952,0.56587 -0.09314,1.21439 0.34486,1.63988l14.43945,14.43945l-14.43945,14.43945c-0.39185,0.37623 -0.54969,0.9349 -0.41265,1.46055c0.13704,0.52565 0.54754,0.93616 1.07319,1.07319c0.52565,0.13704 1.08432,-0.02081 1.46055,-0.41265l14.43945,-14.43945l14.43945,14.43945c0.37623,0.39185 0.9349,0.54969 1.46055,0.41265c0.52565,-0.13704 0.93616,-0.54754 1.07319,-1.07319c0.13704,-0.52565 -0.0208,-1.08432 -0.41265,-1.46055l-14.43945,-14.43945l14.43945,-14.43945c0.44646,-0.42851 0.58398,-1.08719 0.34628,-1.65854c-0.2377,-0.57135 -0.80184,-0.93811 -1.4205,-0.92349z"></path></g></g></svg>
                 Свернуть
             </div>
         </div>
-
+        <style>
+            summary:before {
+   content: "+";
+   font-size: 20px;
+   font-weight: bold;
+   margin: 0px 5px 0 0;
+   padding: 0px 15px 0px 0px;
+}
+ 
+details[open] summary:before {
+   content: "-";
+   font-size: 29px;
+   margin: -3px 4px 0 0;
+}
+            summary{
+                padding: 7px 12px 7px 15px;
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                margin: 0px 0px 3px 0px;
+                color: #ffffff9b;
+                align-items: center;
+                white-space: nowrap; /* Запрещаем перенос строк */
+                overflow: hidden;
+                text-overflow: ellipsis; /* Добавляем многоточие */
+                height: 39px;
+                max-height: 39px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 500;
+            }details{
+                margin: 0 auto;
+                padding: 0;
+                width: 100%;
+                padding: 0px 15px 3px 15px;
+                display: flex;
+                flex-direction: column;
+                white-space: nowrap; /* Запрещаем перенос строк */
+                overflow: hidden;
+                text-overflow: ellipsis; /* Добавляем многоточие */
+            }
+           .category_as a {
+                font-size: 15px;
+                padding: 7px 12px 7px 12px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 3px 0px;
+    white-space: nowrap; /* Запрещаем перенос строк */
+                overflow: hidden;
+                text-overflow: ellipsis; /* Добавляем многоточие */
+            }
+        </style>
 
 
         {% block content %}
