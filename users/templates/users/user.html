@@ -3,7 +3,12 @@
 {%block content%}
 <div class="container">
     <div class="user-info-layer">
-        <div class="user-background"></div>
+        {% if  request.user.profile.background and request.user.profile.background.url %}
+        <div class="user-background" style="background: url('{{request.user.profile.background.url}}');"></div>
+        {%else%}
+        <div class="user-background" style="background: url('{% static 'img/background.jpg' %}');"></div>
+        {%endif%}
+        
         <div class="profile-avatar">
             {% if  request.user.photo and request.user.photo.url %}
             <img class='img-fon' src="{{request.user.photo.url}}" alt="">

@@ -516,7 +516,7 @@ tbody, td, tfoot, th, thead, tr{
 .profile-avatar img{
     border-radius: 101px;
     width: 101px;
-    border: 5px solid #ffffff00;
+    border: 5px solid #404249;
     z-index: 7;
     position: relative;
 }
@@ -558,6 +558,9 @@ tbody, td, tfoot, th, thead, tr{
     padding: 9px 15px 9px 15px;
     font-size: 15px;
     font-weight: 500;
+}
+.user-nav a:hover{
+    background-color: #595d63;
 }
 
 .user-nav{
@@ -688,7 +691,7 @@ tbody, td, tfoot, th, thead, tr{
         padding: 0px 15px 0px 15px!IMPORTANT;
     }
     .user-info-layer{
-        margin: 0px 0px 0px 0px;
+        margin: 15px 0px 0px 0px;
     }
     
 }
