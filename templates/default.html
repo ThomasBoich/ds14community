@@ -18,6 +18,7 @@
                 <div class="user">
                   
                     <!-- <img src="{% static 'img/fon.jpg' %}" alt=""> -->
+                <a href="{% url 'profile' %}">
                     <div class="profile">
                         
                         {% if  request.user.photo and request.user.photo.url %}
@@ -30,9 +31,9 @@
                             <h3 style="margin: 0px 0px 9px 0px;font-size: 19px;">{{request.user.profile.nick}}</h3>
                             <span>{{request.user.email}}</span>
                         </div>
-                        
-                        
+        
                     </div>
+                </a>
                     <!-- <div class="user-info">
                         {%if request.user.profile == ''%}
                         <p>Поделись статусом:                         
