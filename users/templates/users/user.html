@@ -1,0 +1,28 @@
+{% extends 'default.html' %}{% load static %}
+
+{%block content%}
+<div class="container">
+    <div class="user-info">
+        <div class="user-background"></div>
+        <div class="profile-avatar">
+            {% if  request.user.photo and request.user.photo.url %}
+            <img class='img-fon' src="{{request.user.photo.url}}" alt="">
+            {%else%}
+            <img class='img-fon' src="{% static 'img/avatarka.png' %}" alt="">
+            {%endif%}
+        </div>
+        <div class="container" style="padding:0px 15px 0px 15px;margin: -15px 0px 0px 0px;">
+            <div class="profile-name">
+                <div class="user-info">
+                    <h1>{{request.user.profile.nick}}</h1>
+                    <h3>{{request.user.username}}</h3>
+                    <p>Тут цитатка будет, позже добавлю</p>
+                </div>
+                <div class="user-nav">
+                    <a href="">Редактировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

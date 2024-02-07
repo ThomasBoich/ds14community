@@ -581,3 +581,57 @@ tbody, td, tfoot, th, thead, tr{
     width: 19px;
     margin: 0px 9px 0px 0px;
 }
+
+.profile-avatar{
+    position: relative;
+    top: -35px;
+    padding: 0px 15px 0px 15px;
+}
+
+.profile-avatar img{
+    border-radius: 101px;
+    width: 69px;
+    border: 5px solid #ffffff00;
+}
+
+.user-background{
+    width: 100%;
+    height: 149px;
+    background-color: #2B2D31;
+}
+
+.profile-name{
+    background-color:#404248;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+}
+.profile-name h1,h3{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.profile-name h3{
+    font-size: 15px;
+}
+.profile-name h1{
+    font-size: 25px;
+}
+
+.profile-name p{
+    border: none;
+    margin: 15px 0px 15px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.user-nav a{
+    background-color: #505358;
+    border-radius: 101px;
+    padding: 9px 15px 9px 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user-nav{
+    display: flex;
+    margin: 15px 0px 0px 0px;
+    width: max-content;
+}

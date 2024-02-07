@@ -82,3 +82,7 @@ class AppLoginView(LoginView):
         return reverse_lazy('index')
 
     redirect_authenticated_user = True
+    
+
+def profile(request):
+    return render(request, 'users/user.html')

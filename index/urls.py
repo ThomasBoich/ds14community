@@ -10,4 +10,5 @@ urlpatterns = [
     path('categories/post/<post_id>/', post, name='post'),
     path('post/new/', create_post, name='post_new'),
     path('category/new/', create_category, name='category_new'),
+    path('profile/', profile, name='profile')
 ]
