@@ -495,3 +495,33 @@ tbody, td, tfoot, th, thead, tr{
     width: 100%!IMPORTANT;
 }
 
+
+
+@media (max-width: 760px){
+    .prime-menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        height: 65px;
+        background-color: #404249;
+        justify-content: space-between;
+        padding: 5px 5vw 5px 5vw;
+        align-items: center;
+    }
+    .mobile-menu img, svg {
+        max-height: 39px;
+        border-radius: 101px;
+    }
+    .mobile-menu svg, path, g {
+        fill: #FFFFFF70;
+        opacity: 9!IMPORTANT;
+    }
+    .mobile-menu a{
+        width: max-content;
+        cursor: pointer;
+    }
+}
