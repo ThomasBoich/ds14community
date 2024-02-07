@@ -588,6 +588,7 @@ tbody, td, tfoot, th, thead, tr{
         justify-content: space-between;
         padding: 5px 5vw 5px 5vw;
         align-items: center;
+        z-index: 2;
     }
     
     .prime-swipe{
