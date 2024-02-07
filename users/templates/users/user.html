@@ -2,7 +2,7 @@
 
 {%block content%}
 <div class="container">
-    <div class="user-info">
+    <div class="user-info-layer">
         <div class="user-background"></div>
         <div class="profile-avatar">
             {% if  request.user.photo and request.user.photo.url %}
@@ -11,7 +11,7 @@
             <img class='img-fon' src="{% static 'img/avatarka.png' %}" alt="">
             {%endif%}
         </div>
-        <div class="container" style="padding:0px 15px 0px 15px;margin: -15px 0px 0px 0px;">
+        <div class="container" style="padding:0px 15px 0px 15px;margin: -15px 0px 0px 0px;" id="user-profile">
             <div class="profile-name">
                 <div class="user-info">
                     <h1>{{request.user.profile.nick}}</h1>
