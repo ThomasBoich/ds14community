@@ -498,14 +498,6 @@ tbody, td, tfoot, th, thead, tr{
 .table{
     width: 100%!IMPORTANT;
 }
-@media (display-mode: standalone) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .prime-menu {
-        padding-bottom: calc(env(safe-area-inset-bottom) + 7px);
-    }
-    .mobile-menu{
-        padding-bottom: calc(env(safe-area-inset-bottom) + 7px);
-    }
-}
 .prime-swipe{display: none;}
 .mobile-menu{display: none;}
 @media (max-width: 760px){
@@ -514,11 +506,6 @@ tbody, td, tfoot, th, thead, tr{
         left: -100%;
         visibility: hidden;
         opacity: 0;
-        padding-bottom: env(safe-area-inset-bottom);
-        /* //padding-right: 10px; */
-        -webkit-padding-end: env(safe-area-inset-right);
-        /* //padding-bottom: 10px; */
-        -webkit-padding-after: env(safe-area-inset-bottom);
     }
     .mobile-menu{
         display: flex;
@@ -539,7 +526,7 @@ tbody, td, tfoot, th, thead, tr{
     
     .prime-swipe{
         position: absolute;
-        bottom: 0;
+        bottom: 25px;
         width: 100%;
         display: flex;
         font-style: initial;
