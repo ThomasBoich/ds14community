@@ -126,6 +126,9 @@ html:hover::-webkit-scrollbar-thumb {background: #454550!IMPORTANT;box-shadow: n
     overflow-y: auto;
     position: sticky;
     top: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
 }
 
 /* .prime-menu::-webkit-scrollbar-track {
@@ -496,11 +499,14 @@ tbody, td, tfoot, th, thead, tr{
     width: 100%!IMPORTANT;
 }
 
-
+.prime-swipe{display: none;}
 .mobile-menu{display: none;}
 @media (max-width: 760px){
     .prime-menu{
-        display: none;
+        position: fixed;
+        left: -100%;
+        visibility: hidden;
+        opacity: 0;
     }
     .mobile-menu{
         display: flex;
@@ -512,6 +518,19 @@ tbody, td, tfoot, th, thead, tr{
         justify-content: space-between;
         padding: 5px 5vw 5px 5vw;
         align-items: center;
+    }
+    
+    .prime-swipe{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        font-style: initial;
+        align-items: center;
+        justify-content: center;
+        background: #2b2d31;
+        padding: 25px 0px 25px 0px;
+        cursor: pointer;
     }
     .mobile-menu img, svg {
         height: 31px;
@@ -547,4 +566,18 @@ tbody, td, tfoot, th, thead, tr{
     display: flex;
     position: fixed;
     z-index: 9;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    visibility: visible;
+    opacity: 9;
+}
+
+.prime-menu svg{
+    height: 19px;
+    width: 19px;
+    margin: 0px 9px 0px 0px;
 }
