@@ -592,16 +592,21 @@ tbody, td, tfoot, th, thead, tr{
     }
     
     .prime-swipe{
+        z-index: 9;
         position: absolute;
-        bottom: 9px;
-        width: 100%;
+        width: max-content;
         display: flex;
         font-style: initial;
         align-items: center;
         justify-content: center;
-        background: #2b2d31;
-        padding: 25px 0px 25px 0px;
+        background: #404248;
+        padding: 7px 15px 7px 11px;
         cursor: pointer;
+        height: max-content;
+        border-radius: 101px;
+        font-weight: 700;
+        bottom: 5dvh;
+        right: 15px;
     }
     .mobile-menu img, svg {
         height: 31px;
