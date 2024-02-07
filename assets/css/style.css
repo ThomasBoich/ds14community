@@ -496,7 +496,7 @@ tbody, td, tfoot, th, thead, tr{
 }
 
 
-
+.mobile-menu{display: none;}
 @media (max-width: 760px){
     .prime-menu{
         display: none;
@@ -506,14 +506,15 @@ tbody, td, tfoot, th, thead, tr{
         width: 100%;
         position: fixed;
         bottom: 0px;
-        height: 65px;
+        height: 55px;
         background-color: #404249;
         justify-content: space-between;
         padding: 5px 5vw 5px 5vw;
         align-items: center;
     }
     .mobile-menu img, svg {
-        max-height: 39px;
+        height: 31px;
+        max-height: 31px;
         border-radius: 101px;
     }
     .mobile-menu svg, path, g {
@@ -523,5 +524,9 @@ tbody, td, tfoot, th, thead, tr{
     .mobile-menu a{
         width: max-content;
         cursor: pointer;
+    }
+
+    .content-layout{
+        width: 100%;
     }
 }
