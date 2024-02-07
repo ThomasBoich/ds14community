@@ -538,6 +538,9 @@ tbody, td, tfoot, th, thead, tr{
     #index-category{
         margin: 0px 0px 15px 0px!IMPORTANT;
     }
+    .form-control{
+        margin: 0px 0px 15px 0px;
+    }
 }
 
 .active.prime-menu{
