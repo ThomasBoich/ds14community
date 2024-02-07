@@ -517,11 +517,6 @@ tbody, td, tfoot, th, thead, tr{
         justify-content: space-between;
         padding: 5px 5vw 5px 5vw;
         align-items: center;
-        padding-bottom: env(safe-area-inset-bottom);
-        /* //padding-right: 10px; */
-        -webkit-padding-end: env(safe-area-inset-right);
-        /* //padding-bottom: 10px; */
-        -webkit-padding-after: env(safe-area-inset-bottom);
     }
     
     .prime-swipe{
