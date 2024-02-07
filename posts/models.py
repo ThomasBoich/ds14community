@@ -23,11 +23,11 @@ class Post(models.Model):
         verbose_name_plural = 'Статьи'
         
 class Category(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.CharField(max_length=255, blank=True, null=True)
+    name = models.CharField(max_length=255, verbose_name='Название')
+    description = models.CharField(max_length=255, blank=True, null=True, verbose_name='Описание')
     # subcategories = models.ManyToManyField('self', blank=True, symmetrical=False)
-    parent_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='subcategories')
-    image = models.ImageField(upload_to='Categories/Images/%Y/%m/%d/', blank=True, null=True)
+    parent_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='subcategories', verbose_name='Подкатегории')
+    image = models.ImageField(upload_to='Categories/Images/%Y/%m/%d/', blank=True, null=True, verbose_name='Значок')
     
     def __str__(self):
         return self.name

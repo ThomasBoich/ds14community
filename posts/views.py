@@ -33,3 +33,15 @@ def create_category(request):
     else:
         form = CategoryForm()
     return render(request, 'posts/category_edit.html', {'form': form})
+
+from rest_framework import viewsets
+from .models import Post, Category
+from .serializers import PostSerializer, CategorySerializer
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
