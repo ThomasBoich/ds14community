@@ -71,7 +71,7 @@
                   {% for category in categories_as %}
                 <details class="category_as">
                     <summary>{{ category.name }}</summary>
-                    {% for subcategory in category.subcategories.all %}<a href="{% url 'sub_list_categories' cat_id=subcategory.id %}"><span style="font-size: 19px;margin: 0px 19px 0px 3px;"># </span>{{subcategory.name}}</a>{% endfor %}
+                    {% for subcategory in category.subcategories.all %}<a href="{% url 'sub_list_categories' cat_id=subcategory.id %}"><span style="font-size: 19px;margin: 0px 15px 0px 3px;"># </span>{{subcategory.name}}</a>{% endfor %}
                   </details>
                   {% endfor %}
             </div>
@@ -125,7 +125,7 @@ details[open] summary:before {
                 font-size: 15px;
                 padding: 7px 12px 7px 12px;
     border-radius: 7px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     margin: 0px 0px 3px 0px;
     white-space: nowrap; /* Запрещаем перенос строк */
