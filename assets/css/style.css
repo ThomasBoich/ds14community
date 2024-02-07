@@ -93,10 +93,6 @@ body{
 
 p{
     display: block!important;
-    margin-block-start: 1em!important;
-    margin-block-end: 1em!important;
-    margin-inline-start: 0px!important;
-    margin-inline-end: 0px!important;
 }
 
 .logo{font-size: 25px;font-weight: 700;color: #FFFFFF;}.logo span{color: #FFFFFF90;font-weight: 500;font-size: 15px;}
