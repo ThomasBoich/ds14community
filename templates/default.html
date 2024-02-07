@@ -106,6 +106,18 @@
             </a>
         </div>
 
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                const mobileNav = document.querySelector('.mobile-nav')
+            const primeMenu = document.querySelector('.prime-menu')
+            mobileNav.addEventListener('click', function(){
+                primeMenu.classList.toggle('active')
+            })
+        });
+        
+        
+        </script>
+
     </div>
 
 
@@ -169,17 +181,6 @@
         });
         
     };   
-
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        const mobileNav = document.querySelector('.mobile-nav')
-    const primeMenu = document.querySelector('.prime-menu')
-    mobileNav.addEventListener('ontouchend', function(){
-        primeMenu.classList.toggle('active')
-    })
-});
-
 
 </script>
   </body>
