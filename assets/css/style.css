@@ -526,7 +526,7 @@ tbody, td, tfoot, th, thead, tr{
     
     .prime-swipe{
         position: absolute;
-        bottom: 25px;
+        bottom: 15vh;
         width: 100%;
         display: flex;
         font-style: initial;
